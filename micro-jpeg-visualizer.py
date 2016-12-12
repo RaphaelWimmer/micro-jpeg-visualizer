@@ -4,6 +4,7 @@
 
 from struct import *
 import math 
+import sys
 
 zigzag = [0,  1,  8, 16,  9,  2,  3, 10,
 	17, 24, 32, 25, 18, 11,  4,  5,
@@ -280,5 +281,5 @@ w.pack()
 j = jpeg()
 #j.decode(open('images/huff_simple0.jpg', 'r').read())
 #j.decode(open('images/surfer.jpg', 'r').read())
-j.decode(open('images/porsche.jpg', 'r').read())
+j.decode(open(sys.argv[1], 'r').read())
 mainloop()
